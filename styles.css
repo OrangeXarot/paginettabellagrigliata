@@ -1,0 +1,93 @@
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #0e1113;
+    color: #fff
+}
+
+a {
+    color: #ff4f00;
+}
+
+a:visited {
+    color: #a5674b;
+}
+
+a:hover {
+    color: #ffc2a2;
+}
+
+h1 {
+    text-align: center;
+}
+
+.image-the-rock {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 220px;
+
+}
+
+.therock {
+    height: 200px;
+    border-radius: 15px;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: ease 1s opacity;
+}
+
+.therock-norm {
+    opacity: 1;
+}
+
+.therock-vine {
+    opacity: 0;
+}
+
+.centerer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.info {
+    padding-bottom: 20px;
+}
+
+.form-bello {
+    max-width: 550px;
+}
+
+.submit-righter {
+    width: 100%;
+    text-align: right;
+}
+
+fieldset {
+    border-radius: 10px;
+    border-color: #fff;
+}
+
+input {
+    border: none;
+    padding: 2px 5px;
+}
+
+.submit {
+    background-color: rgba(0, 0, 0, 0);
+    color: #ff4f00;
+    border: 2px solid #ff4f00;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.credits {
+    font-size: 10px;
+    height: 0;
+    transform: translateY(15px);
+}
+
+.thanks {
+    margin: auto;
+}

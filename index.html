@@ -9,65 +9,52 @@
 
         <meta charset="UTF-8">
 
-        <style>
-
-            body {
-                font-family: "Roboto", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                background-color: #0e1113;
-                color: #fff
-            }
-
-            a {
-                color: #ff4f00;
-            }
-
-            a:visited {
-                color: #a5674b;
-            }
-
-
-            h1 { 
-                text-align: center;
-            }
-            
-            .image-the-rock {
-                width: 100%;
-                text-align: center;
-            }
-
-            .therock {
-                width: 50%;
-                border-radius: 25px;
-            }
-
-
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <h1>Siete Invitati alla Grigliata!</h1>
         <div class="image-the-rock">
-            <img src="src/the_rock.jpg" alt="immagine" class="therock" />
-        </div>
-        <div class="info">
-            <h2>Informazioni</h2>
-            <ul>
-                <li>Luogo: <a href="https://maps.app.goo.gl/hAsMtpqYqgcd5BQW8" target="_blank">Via Cefalù, 40 (Milano)</a></li>
-                <li>Data: <a href="https://bimcal.it/calendario/15-giugno-2024" target="_blank">15 giugno 2024</a></li>
-                <li>Ora: 10:00</li>
-            </ul>
-        </div>
+            <img src="src/the_rock.jpg" alt="immagine" class="therock therock-norm" />
+            <img src="src/vine.gif" alt="immagine" class="therock therock-vine" />
 
-        <div class="form-bello">
+        </div>
+        <div class="centerer"><div class="info">
+            <h2>Informazioni importantissime</h2>
+            <p>La grigliata sarà il giorno 15 giugno 2024 alle ore 10:00 in <a href="https://maps.app.goo.gl/hAsMtpqYqgcd5BQW8" target="_blank">Via Cefalù, 40 (Milano)</a></p>
+        </div></div>
+        <div class="centerer"><div class="form-bello">
             <fieldset>
                 <legend>CI SARAI???</legend>
-            <form>
-                <label>Nome: <input type="text" name="nome" placeholder="Mario Verdi"></label>
-                <label><input type="radio" name="presenza"> Ci sarò</label>
-                <label><input type="radio" name="presenza"> Ci sarò</label>
+            <form action="save.php" method="post">
+                <label>Nome: <input type="text" name="nome" placeholder="Mario Verdi" required></label><br /><br />
+                <label onclick="showRock(false)"><input type="radio" name="presenza" value="true" checked>Ci sarò</label><br />
+                <label onclick="showRock(true)"><input type="radio" name="presenza" value="false"  >Non ci sarò :(</label><br /><br />
+                <label>Hai note da aggiungere? (allergie, oppure complimenti a Mina Shorky)<br />
+                <textarea cols="35" rows="4" name="note"></textarea></label><br /><br />
+                <div class="submit-righter"><input type="submit" class="submit" value="Invia!"></div>
+                <div class="submit-righter"><div class="credits"><a href="creds.html">Crediti in questa pagina</a></div></div>
             </form>
         </fieldset>
-        </div>
+        </div></div>
+
+        <script>
+
+
+        function showRock(boom) {
+            let norm = document.querySelector(".therock-norm");
+            let vine = document.querySelector(".therock-vine");
+
+
+            if(boom) {
+                vine.src = ""
+                vine.src = "src/vine.gif"
+                norm.style.opacity = 0;
+                vine.style.opacity = 1;
+            } else {
+                norm.style.opacity = 1;
+                vine.style.opacity = 0;
+            }
+        }
+    </script>
     </body>
 </html>

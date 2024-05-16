@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url("src/stars.png");
+            background-position: center;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .big-creds {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            align-content: center;
+            justify-content: center;
+
+        }
+
+        .creds {
+            color: #f0c41c;
+            text-align: center;
+        }
+
+        .spacing {
+            height: 50px;
+            width: 20px;
+            animation: slideUp 40s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            0% {
+                height: 900px;
+            }
+            100% {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="big-creds">
+    <div class="spacing"></div>
+    <div class="creds">
+        <h1>Crediti</h1>
+        Sviluppo -Neri<br />
+        Pianificazione -Amato e Rizzardi<br />
+        Stile -Rizzardi, Neri e Capoccia<br />
+        Fornitore del server -Capoccia<br />
+        Scrittore dei crediti -Amato<br />
+    </div></div>
+</body>
