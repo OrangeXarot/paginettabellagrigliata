@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <style>
         body {
             background-image: url("src/stars.png");
@@ -34,12 +34,58 @@
         .creds {
             color: #f0c41c;
             text-align: center;
+            transform: scaleX(1.4) rotateX(47deg);
+            line-height: 50px;
+            animation: piccolo 100s linear forwards;
         }
 
-        .spacing {
-            height: 50px;
+        .wrap {
+            perspective: 400px;
+            perspective-origin: 50% 50%;
+        }
+
+        /*.spacing {
+            height: 900px;
             width: 20px;
-            animation: slideUp 40s ease-out forwards;
+            animation:  slideUp 40s ease-out 4s forwards;
+        }*/
+
+        .starwars {
+            animation: star 10s linear forwards;
+
+            font-family: "Saira Semi Condensed", sans-serif;
+            font-weight: 500;
+            color: #f0c41c;
+            font-size: 30px;
+            -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+            -webkit-text-stroke: 1px #f0c41c;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+
+
+            left: 0;
+            width: 100%;
+        }
+
+        @keyframes star {
+            0% {
+                transform: scale(5);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        @keyframes piccolo {
+            0% {
+                transform: translateZ(200px) translateY(700px) scaleX(1.4) rotateX(90deg);
+            }
+
+            100% {
+                transform: translateZ(-1000px) translateY(-1000px) scaleX(1.4) rotateX(90deg);
+            }
         }
 
         @keyframes slideUp {
@@ -54,13 +100,14 @@
 </head>
 <body>
 <div class="big-creds">
+    <h1 class="starwars">CREDITI</h1>
     <div class="spacing"></div>
+    <div class="wrap">
     <div class="creds">
-        <h1>Crediti</h1>
-        Sviluppo -Neri<br />
+        <b>Sviluppo -Neri</b><br />
         Pianificazione -Amato e Rizzardi<br />
         Stile -Rizzardi, Neri e Capoccia<br />
         Fornitore del server -Capoccia<br />
-        Scrittore dei crediti -Amato<br />
-    </div></div>
+        Gestione personale -Amato<br />
+    </div></div></div>
 </body>
