@@ -14,7 +14,7 @@
 
 </head>
 <?php
-$nome     = $_POST['nome'];
+$nome     = trim($_POST['nome']) ;
 $presenza = $_POST['presenza'];
 $note     = $_POST['note'];
 
